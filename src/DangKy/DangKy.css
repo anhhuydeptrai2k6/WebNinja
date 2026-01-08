@@ -155,3 +155,53 @@ body {
         transform: translateX(40px);
     }
 }
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    body {
+        padding: 16px;
+    }
+
+    /* FORM */
+    .FormDangKy {
+        width: 100%;
+        max-width: 360px;
+        padding: 22px 20px 26px;
+        border-radius: 12px;
+    }
+
+    /* TITLE */
+    .FormDangKy h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    /* INPUT */
+    .FormDangKy input {
+        height: 44px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    /* BUTTON */
+    .FormDangKy button {
+        height: 46px;
+        font-size: 15px;
+        border-radius: 10px;
+        margin-top: 16px;
+    }
+
+    /* TOAST */
+    .toast-container {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .toast {
+        min-width: unset;
+        width: 100%;
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+}
