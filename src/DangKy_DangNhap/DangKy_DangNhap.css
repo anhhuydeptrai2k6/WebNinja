@@ -1,0 +1,134 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1c1f2a, #0b0d12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== AUTH WRAPPER ===== */
+.AuthWrapper {
+    width: 420px;
+    background: linear-gradient(180deg, #151820, #0f1117);
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== SWITCH ===== */
+.AuthSwitch {
+    display: flex;
+}
+
+.AuthSwitch button {
+    flex: 1;
+    height: 48px;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.AuthSwitch button.active {
+    color: #ff4f9a;
+    border-bottom: 2px solid #ff4f9a;
+}
+
+/* ===== SLIDER ===== */
+.AuthViewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.AuthTrack {
+    display: flex;
+    width: 200%;
+    transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.AuthForm {
+    flex: 0 0 50%;
+    padding: 28px 30px 32px;
+}
+
+/* ===== FORM STYLE ===== */
+.AuthForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #ff6ec7, #ff3d81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.AuthForm input {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 14px;
+    padding: 0 14px;
+    background: #0e1016;
+    border-radius: 10px;
+    border: 1px solid #2a2f3a;
+    color: #fff;
+    outline: none;
+}
+
+.AuthForm input::placeholder {
+    color: #8a8f9c;
+}
+
+.AuthForm button {
+    width: 100%;
+    height: 48px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #8b0f4d, #c0146b);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== TOAST ===== */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    min-width: 260px;
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #151820, #0f1117);
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    animation: slideIn 0.35s ease forwards;
+}
+
+.toast.success { border-left: 4px solid #4caf50; }
+.toast.error { border-left: 4px solid #ff4f9a; }
+.toast.warning { border-left: 4px solid #ff9800; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; transform: translateX(40px); }
+}

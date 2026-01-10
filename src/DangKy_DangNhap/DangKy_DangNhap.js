@@ -28,6 +28,31 @@ const HandleRegister = async ()=>{
     else showToast("Đăng ký thất bại !", "error");
 }
 
+const HandleLogin = async ()=>{
+    const username = document.getElementById('login-username').value.trim();
+    const password = document.getElementById('login-password').value.trim();
+
+    if (!username || !password) {
+        showToast("Tài khoản hoặc mật khẩu không hợp lệ !", "error");
+        return;
+    }
+
+    const response =  await fetch('http://localhost:8080/auth/login', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            username : username,
+            password : password,
+        })
+    })
+    if (response.ok) {
+        showToast("Đăng nhập thành công !", "success");
+    }
+    else showToast("Đăng nhập thất bại !", "error");
+}
+
 function initToast() {
     if (!document.querySelector(".toast-container")) {
         const container = document.createElement("div");
@@ -60,3 +85,20 @@ function showToast(message, type = "success", duration = 3000) {
         setTimeout(() => toast.remove(), 300);
     }, duration);
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("authTrack");
+    const btnLogin = document.getElementById("btnLogin");
+    const btnRegister = document.getElementById("btnRegister");
+
+    btnLogin.onclick = () => {
+        track.style.transform = "translateX(0)";
+        btnLogin.classList.add("active");
+        btnRegister.classList.remove("active");
+    };
+
+    btnRegister.onclick = () => {
+        track.style.transform = "translateX(-50%)";
+        btnRegister.classList.add("active");
+        btnLogin.classList.remove("active");
+    };
+});

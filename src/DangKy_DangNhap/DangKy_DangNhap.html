@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký tài khoản</title>
+    <link rel="icon" href="https://gomobi.vn/home/images/icons/nj.jpeg">
+    <link rel="stylesheet" href="DangKy_DangNhap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="AuthWrapper">
+        <div class="AuthSwitch">
+            <button id="btnLogin" class="active">Đăng nhập</button>
+            <button id="btnRegister">Đăng ký</button>
+        </div>
+
+        <div class="AuthViewport">
+            <div class="AuthTrack" id="authTrack">
+                <!-- LOGIN -->
+                <div class="AuthForm">
+                    <h2>Đăng nhập</h2>
+                    <input type="text" placeholder="Tài khoản" id="login-username">
+                    <input type="password" placeholder="Mật khẩu" id="login-password">
+                    <button onclick="HandleLogin()">Đăng nhập</button>
+                </div>
+
+                <!-- REGISTER -->
+                <div class="AuthForm">
+                    <h2>Đăng ký</h2>
+                    <input type="text" placeholder="Tài khoản" id="username">
+                    <input type="password" placeholder="Mật khẩu" id="password">
+                    <input type="password" placeholder="Nhập lại mật khẩu" id="repassword">
+                    <button onclick="HandleRegister()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="DangKy_DangNhap.js"></script>
+</body>
+</html>
