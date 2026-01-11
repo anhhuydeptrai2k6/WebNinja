@@ -1,7 +1,7 @@
 const HandleRegister = async ()=>{
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const repassword = document.getElementById('repassword').value.trim();
+    const username = document.getElementById('register-username').value.trim();
+    const password = document.getElementById('register-password').value.trim();
+    const repassword = document.getElementById('register-repassword').value.trim();
 
     if (!username || !password || !repassword) {
         showToast("Tài khoản hoặc mật khẩu không hợp lệ!", "error");
@@ -50,7 +50,7 @@ const HandleLogin = async ()=>{
     if (response.ok) {
         showToast("Đăng nhập thành công !", "success");
     }
-    else showToast("Đăng nhập thất bại !", "error");
+    else showToast("Tài khoản hoặc mật khẩu không chính xác !", "error");
 }
 
 function initToast() {
