@@ -141,3 +141,44 @@ body {
         transform: translateX(40px);
     }
 }
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .AuthWrapper {
+        width: 100%;
+        max-width: 380px;
+        border-radius: 12px;
+    }
+
+    .AuthForm {
+        padding: 20px;
+    }
+
+    .AuthForm h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .AuthForm input {
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .AuthForm button {
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .AuthSwitch button {
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .toast {
+        min-width: unset;
+        width: calc(100vw - 40px);
+    }
+}
