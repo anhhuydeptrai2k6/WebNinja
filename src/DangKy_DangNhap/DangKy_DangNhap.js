@@ -49,6 +49,7 @@ const HandleLogin = async ()=>{
     })
     if (response.ok) {
         showToast("Đăng nhập thành công !", "success");
+        setTimeout(()=>{window.location.href="../TrangChu/TrangChu.html";}, 2500)
     }
     else showToast("Tài khoản hoặc mật khẩu không chính xác !", "error");
 }
